@@ -3,10 +3,13 @@ import React, { Component } from 'react';
 export default class Counter extends Component{
   constructor(props){
     super(props);
-    this.state = {num:0};
+    this.state = {
+      num:0,
+    };
   }
-  counterClick() {
-    if () {
+  counterClick(e) {
+    console.log(e.target);
+    if (e.target.id == "plus"){
       this.setState({
         num: this.state.num + 1
       });
@@ -18,11 +21,12 @@ export default class Counter extends Component{
   }
 
   render(){
+
     return(
-      <div>
-        <button id="plus" onClick={this.counterClick.bind(this)}>+</button>
+      <div id="counters">
+        <button id="plus" onClick={(e) => this.counterClick(e)}>+</button>
         <div>{this.state.num}</div>
-        <button id="minus" onClick={this.counterClick.bind(this)}>-</button>
+        <button id="minus" onClick={(e) => this.counterClick(e)}>-</button>
       </div>
     );
   }

@@ -3,6 +3,7 @@ import logo from './logo.svg';
 import './App.css';
 import HelloWorld from './HelloWorld.js';
 import GreetingContainer from './GreetingContainer.js';
+import CounterList from './CounterList.js';
 import Counter from './Counter.js';
 
 class App extends Component {
@@ -15,7 +16,7 @@ class App extends Component {
           <h1 className="App-title">Welcome to React</h1>
         </header>
         <GreetingContainer />
-        <Counter/>
+        <CounterList/>
       </div>
     );
   }
